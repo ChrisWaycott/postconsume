@@ -8,8 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script src="site.js"></script>
     <script src="instafeed.min.js"></script>
+
     <script type="text/javascript">
         var feed = new Instafeed({
             get: 'user',
@@ -152,17 +154,9 @@
             <div id="instafeed" class="columns is-multiline"></div>
         </div>
     </section>
+
     <hr>
-    <section class="section hover" id="minimums">
-        <div class="container">
-            <h1 class="title">Minimums</h1>
-            <h2 class="subtitle">
-        Minimum Orders Of 50 On All Sizes.  Special Pricing For 10+ Colors. Please Contact Us For Quotes.
-      </h2>
-        </div>
-    </section>
-    <hr>
-    <section class="section hover" id="pricing">
+    <!-- <section class="section hover" id="pricing">
         <div class="container">
             <h1 class="title">Poster Pricing</h1>
             <figure class="image is-750x1188 columns">
@@ -255,51 +249,83 @@
                 </tbody>
             </table>
         </div>
-    </section>
+    </section> -->
     <hr>
     <section class="section hover" id="request">
-      <div class="container">
-        <h1 class="title">Estimate Request</h1>
-        <div class="columns is-desktop">
-          <div class="column is-half is-offset-one-quarter">
-            <div class="field">
-              <label class="label">From</label>
-              <div class="control has-icons-left has-icons-right">
-                <input class="input is-medium" type="text" placeholder="Name">
-                <span class="icon is-left">
-                <i class="fa fa-user"></i>
-                </span>
-                <span class="icon is-right">
-                <i class="fa fa-check"></i>
-                </span>
-              </div>
-            </div>
-            <div class="field">
-              <label class="label">Email</label>
-              <p class="control has-icons-left has-icons-right">
-                <input class="input  is-medium" type="email" placeholder="Email">
-                <span class="icon is-small is-left">
-                <i class="fa fa-envelope"></i>
-                </span>
-                <span class="icon is-small is-right">
-                <i class="fa fa-check"></i>
-                </span>
-              </p>
-            </div>
-            <div class="field">
-              <label class="label">Message</label>
-              <div class="control">
-                <textarea class="textarea  is-medium" placeholder="Textarea"></textarea>
-              </div>
-            </div>
-            <div class="field">
-              <p class="control">
-              <button class="button is-success is-fullwidth">
-              Send Message
-              </button>
-              </p>
+      <h1 class="title">Let's Get Started</h1>
+      <div id='form' class="container">
+  <div class="columns">
+    <div class="column is-half">
+      <figure class="image is-750x1188" style="width: 70%; margin:auto;">
+          <img src="https://static1.squarespace.com/static/5266b6c9e4b04f7def5500ba/t/54513afde4b03ac5bb397d7b/1414609663390/postersizes2.jpg?format=750w" >
+      </figure>
+    </div>
+    <div class="column is-half">
+      <label class="label">Size</label>
+      <div class="column">
+        <button class="button is-primary" style="width: 100%" v-on:click="size = 'A', film = 25, sheet = 1.60, discount = .55, large = 1, show = true">A - UP TO 12" x 24"</button>
+      </div>
+      <div class="column">
+        <button class="button is-primary" style="width: 100%" v-on:click="size = 'B', film = 30, sheet = 1.75, discount = .60, large = 1, show = true">B - UP TO 18" x 24"</button>
+      </div>
+      <div class="column">
+        <button class="button is-primary" style="width: 100%" v-on:click="size = 'C', film = 35, sheet = 2.35, large = 1.55, show = true">C - UP TO 24" x 38"</button>
+      </div>
+
+
+    <div class="columns is-mobile">
+      <div class="column">
+        <div class="field">
+          <label class="label">Colors</label>
+          <div class="control">
+            <div class="select">
+              <select v-model="colors" v-on:click="">
+                <option disabled value=""># Of Colors</option>
+                <option v-on:click="">1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+              </select>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="field">
+          <label class="label">Quantity</label>
+          <div class="control">
+            <input v-model="quantity" class="input" placeholder="Quantity Needed">
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="columns is-mobile">
+      <div class="column">
+  <span># Of Colors: {{ colors }}</span>
+  </br>
+  <span>Film Per Color: ${{film}}</span></br>
+  Paper Per Sheet: $<span v-show="show">{{perSheet}}</span></br></div>
+  <div class="column">
+  <span>Film Total: ${{filmTotal}}</span></br>
+  <span>Sheet Total: ${{ sheetTotal }}</span></br>
+  <span>Estimate: ${{estimate}}</span></br>
+  <span v-for="option in options" v-bind:value="option.value">Value: ${{option.value}}</span>
+</div>
+</div>
+    </section>
+    <hr>
+    <section class="section hover" id="minimums">
+        <div class="container">
+            <h1 class="title">Minimums</h1>
+            <h2 class="subtitle">
+        Minimum Orders Of 50 On All Sizes.  Special Pricing For 10+ Colors. Please Contact Us For Quotes.
+      </h2>
         </div>
     </section>
     <hr>
@@ -360,6 +386,40 @@ FEE CONSISTS OF INITIAL COST OF JOB PLUS 50%. Additional fees will be applied if
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/vue@2.4.2"></script>
+    <script type="text/javascript">
+    new Vue({
+      el: '#form',
+      data: {
+        colors: '',
+        quantity: '',
+        film: '',
+        sheet: '0',
+        size: '',
+        discount: '',
+        large: '',
+        show: false
+      },
+      computed: {
+        filmTotal: function() {
+          return (this.film * this.colors).toFixed(2)
+        },
+        perSheet: function() {
+          if (this.quantity >= 100 && this.size != "C") {
+            return (Number((this.sheet - this.discount)) + Number(this.colors-1)).toFixed(2)
+          } else {
+            return (Number(this.sheet ) + Number((this.colors-1) * this.large)).toFixed(2)
+          }
+        },
+        sheetTotal: function() {
+          return (this.perSheet * this.quantity).toFixed(2)
+        },
+        estimate: function() {
+          return (Number(this.sheetTotal) + Number(this.filmTotal)).toFixed(2)
+        }
+      }
+    });
+    </script>
 </body>
 
 </html>
