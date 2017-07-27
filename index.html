@@ -1,351 +1,365 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
-<title>Page Title</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.4/css/bulma.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="site.js"></script>
-<script src="instafeed.min.js"></script>
-<script type="text/javascript">
-var feed = new Instafeed({
-  get: 'user',
-  userId: '5777514565',
-  clientId: '3e05accf969b4278b24ab4a06850a881',
-  accessToken: '5777514565.3e05acc.9d2eecbef99a4b30b74ef7dbd45c6b8b',
-  resolution: 'low_resolution',
-  limit: '6',
-  template: '<div class="column is-one-third has-text-centered"><a href="{{link}}"><img src="{{image}}" /></a></div>'
-});
-feed.run();
-</script>
-<style>
-.hover:hover {
-    background-color: #eafff9;
-}
-hr {margin: 0;}
-.section h1 {padding-bottom: 10px;}
-.header-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.49),rgba(0, 0, 0, 0.89)),url('http://www.lynnhu.com/img/print-process-work.jpg');
-  background-size: cover;
-}
-</style>
+    <title>Page Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="site.js"></script>
+    <script src="instafeed.min.js"></script>
+    <script type="text/javascript">
+        var feed = new Instafeed({
+            get: 'user',
+            userId: '5777514565',
+            clientId: '3e05accf969b4278b24ab4a06850a881',
+            accessToken: '5777514565.3e05acc.9d2eecbef99a4b30b74ef7dbd45c6b8b',
+            resolution: 'low_resolution',
+            limit: '6',
+            template: '<div class="column is-half has-text-centered"><a href="{{link}}"><img src="{{image}}" /></a></div>'
+        });
+        feed.run();
+    </script>
+    <style>
+        .hover:hover {
+            background-color: #eafff9;
+        }
+        hr {
+            margin: 0;
+        }
+        .section h1 {
+            padding-bottom: 10px;
+        }
+        .header-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.49), rgba(0, 0, 0, 0.89)), url('http://www.lynnhu.com/img/print-process-work.jpg');
+            background-size: cover;
+        }
+    </style>
 </head>
+
 <body>
-
 <div class="container">
-    <nav class="navbar">
-  <div class="navbar-brand">
-    <a class="navbar-item" href="http://postconsume" style="font-size: 1.5rem;">
-      <i class="fa fa-file-o" aria-hidden="true"></i>&#160;&#160;<strong>Post Consume</strong>
-    </a>
 
-    <a class="navbar-item is-hidden-desktop" href="https://instagram.com/postconsume" target="_blank">
-      <span class="icon" style="color: #333;">
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="http://postconsume" style="font-size: 1.5rem;">
+                    <i class="fa fa-file-o" aria-hidden="true"></i>&#160;&#160;<strong>Post Consume</strong>
+                </a>
+
+                <a class="navbar-item is-hidden-desktop" href="https://instagram.com/postconsume" target="_blank">
+                    <span class="icon" style="color: #333;">
         <i class="fa fa-instagram"></i>
       </span>
-    </a>
+                </a>
 
-    <a class="navbar-item is-hidden-desktop" href="https://twitter.com/jgthms" target="_blank">
-      <span class="icon" style="color: #333;">
+                <a class="navbar-item is-hidden-desktop" href="https://twitter.com/jgthms" target="_blank">
+                    <span class="icon" style="color: #333;">
         <i class="fa fa-twitter"></i>
       </span>
-    </a>
+                </a>
 
-    <div class="navbar-burger burger" data-target="navMenuExample">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
+                <div class="navbar-burger burger" data-target="navMenuExample">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
 
-  <div id="navMenuExample" class="navbar-menu">
-    <div class="navbar-start">
-      <a class="navbar-item is-hidden-desktop" href="http://bulma.io/">
+            <div id="navMenuExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item is-hidden-desktop" href="http://bulma.io/">
         Home
       </a>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link  is-active" href="/documentation/overview/start/">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link  is-active" href="/documentation/overview/start/">
           Posters
         </a>
-        <div class="navbar-dropdown ">
-          <a class="navbar-item " href="#minimums">
+                        <div class="navbar-dropdown ">
+                            <a class="navbar-item " href="#minimums">
             Minimums
           </a>
-          <a class="navbar-item " href="#pricing">
+                            <a class="navbar-item " href="#pricing">
             Pricing
           </a>
-        </div></div>
-        <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link  is-active" href="#payment">
+                        </div>
+                    </div>
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link  is-active" href="#payment">
           Policies
         </a>
-        <div class="navbar-dropdown ">
-          <a class="navbar-item " href="#payment">
+                        <div class="navbar-dropdown ">
+                            <a class="navbar-item " href="#payment">
             Deposits &#38; Payment
           </a>
-          <a class="navbar-item " href="#shipping">
+                            <a class="navbar-item " href="#shipping">
             Shipping
           </a>
-          <a class="navbar-item " href="#rush">
+                            <a class="navbar-item " href="#rush">
             Rush Jobs
           </a>
-          <a class="navbar-item " href="#paper">
+                            <a class="navbar-item " href="#paper">
             Stock Paper
           </a>
-        </div></div>
+                        </div>
+                    </div>
 
-            <a class="navbar-item is-active" href="#request">
+                    <a class="navbar-item is-active" href="#request">
               Estimate Request
             </a>
 
-          <a class="navbar-item is-active" href="#work">
+                    <a class="navbar-item is-active" href="#work">
             Current Work
           </a>
-          <hr class="navbar-divider">
+                    <hr class="navbar-divider">
 
-        </div>
-      </div>
+                </div>
+            </div>
 
 
 
-    <div class="navbar-end">
-      <a class="navbar-item is-hidden-touch" href="https://instagram.com/postconsume" target="_blank">
-        <span class="icon" style="color: #333;">
+            <div class="navbar-end">
+                <a class="navbar-item is-hidden-touch" href="https://instagram.com/postconsume" target="_blank">
+                    <span class="icon" style="color: #333;">
           <i class="fa fa-instagram"></i>
         </span>
-      </a>
-      <a class="navbar-item is-hidden-touch" href="https://twitter.com/postconsume" target="_blank">
-        <span class="icon" style="color: #333;">
+                </a>
+                <a class="navbar-item is-hidden-touch" href="https://twitter.com/postconsume" target="_blank">
+                    <span class="icon" style="color: #333;">
           <i class="fa fa-twitter"></i>
         </span>
-      </a>
+                </a>
+            </div>
     </div>
-  </div>
-</nav>
-<section class="hero is-primary is-medium header-image">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <h1 class="title">
+    </nav>
+
+    <section class="hero is-primary is-medium header-image">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">
         Quality Screen Printing Since 1966
       </h1>
-      <h2 class="subtitle">
+                <h2 class="subtitle">
         From Our Large 16,000 ft² Facility In Valencia, California
       </h2>
-    </div>
-  </div>
-</section>
-<section class="section hover" id="work">
-    <div class="container">
-      <h1 class="title">Our Work</h1>
-      <div id="instafeed" class="columns is-multiline"></div>
-    </div>
-</section>
-<hr>
-<section class="section hover" id="minimums">
-    <div class="container">
-      <h1 class="title">Minimums</h1>
-      <h2 class="subtitle">
+            </div>
+        </div>
+    </section>
+    <section class="section hover" id="work">
+        <div class="container">
+            <h1 class="title">Our Work</h1>
+            <div id="instafeed" class="columns is-multiline"></div>
+        </div>
+    </section>
+    <hr>
+    <section class="section hover" id="minimums">
+        <div class="container">
+            <h1 class="title">Minimums</h1>
+            <h2 class="subtitle">
         Minimum Orders Of 50 On All Sizes.  Special Pricing For 10+ Colors. Please Contact Us For Quotes.
       </h2>
-    </div>
-</section>
-<hr>
-<section class="section hover" id="pricing">
-    <div class="container">
-      <h1 class="title">Poster Pricing</h1>
-      <figure class="image is-750x1188 columns">
-  <img class="column is-half is-offset-one-quarter"src="https://static1.squarespace.com/static/5266b6c9e4b04f7def5500ba/t/54513afde4b03ac5bb397d7b/1414609663390/postersizes2.jpg?format=750w" style="height: 100%;">
-</figure>
-      <table class="table is-bordered">
-  <thead>
-    <tr class="is-selected">
-      <th></th>
-      <th><strong>A</strong></th>
-      <th><strong>B</strong></th>
-      <th><strong>C</strong></th>
-    </tr>
-  </thead>
-  <tr>
-      <th>SIZE</th>
-      <td>UP TO 12" x 24"</td>
-      <td>UP TO 18" x 24"</td>
-      <td>UP TO 24" x 38"</td>
-  </tr>
-  <tr>
-      <th>FILM</th>
-      <td>$25 PER COLOR</td>
-      <td>$30 PER COLOR</td>
-      <td>$35 PER COLOR</td>
-  </tr>
-  <tr>
-      <th>1 COLOR</th>
-      <td>50-99: $1.60 PER SHEET</br>100+: $1.05 PER SHEET</td>
-      <td>50-99: $1.75 PER SHEET</br>100+: $1.15 PER SHEET</td>
-      <td>$2.35 PER SHEET</td>
-  </tr>
-  <tr>
-      <th>2 COLOR</th>
-      <td>50-99: $2.60 PER SHEET</br>100+: $2.05 PER SHEET</td>
-      <td>50-99: $2.75 PER SHEET</br>100+: $2.15 PER SHEET</td>
-      <td>$3.90 PER SHEET</td>
-  </tr>
-  <tr>
-      <th>3 COLOR</th>
-      <td>50-99: $3.60 PER SHEET</br>100+: $3.05 PER SHEET</td>
-      <td>50-99: $3.75 PER SHEET</br>100+: $3.15 PER SHEET</td>
-      <td>$5.45 PER SHEET</td>
-  </tr>
-  <tr>
-      <th>4 COLOR</th>
-      <td>50-99: $4.60 PER SHEET</br>100+: $4.05 PER SHEET</td>
-      <td>50-99: $4.75 PER SHEET</br>100+: $4.15 PER SHEET</td>
-      <td>$7.00 PER SHEET</td>
-  </tr>
-  <tr>
-      <th>5 COLOR</th>
-      <td>50-99: $5.60 PER SHEET</br>100+: $5.05 PER SHEET</td>
-      <td>50-99: $5.75 PER SHEET</br>100+: $5.15 PER SHEET</td>
-      <td>$8.55 PER SHEET</td>
-  </tr>
-  <tr>
-      <th>6 COLOR</th>
-      <td>50-99: $6.60 PER SHEET</br>100+: $6.05 PER SHEET</td>
-      <td>50-99: $6.75 PER SHEET</br>100+: $6.15 PER SHEET</td>
-      <td>$10.10 PER SHEET</td>
-  </tr>
-  <tr>
-      <th>7 COLOR</th>
-      <td>50-99: $7.60 PER SHEET</br>100+: $7.05 PER SHEET</td>
-      <td>50-99: $7.75 PER SHEET</br>100+: $7.15 PER SHEET</td>
-      <td>$11.65 PER SHEET</td>
-  </tr>
-  <tr>
-      <th>8 COLOR</th>
-      <td>50-99: $8.60 PER SHEET</br>100+: $8.05 PER SHEET</td>
-      <td>50-99: $8.75 PER SHEET</br>100+: $8.15 PER SHEET</td>
-      <td>$13.20 PER SHEET</td>
-  </tr>
-  <tr>
-      <th>9 COLOR</th>
-      <td>50-99: $9.60 PER SHEET</br>100+: $9.05 PER SHEET</td>
-      <td>50-99: $9.80 PER SHEET</br>100+: $9.20 PER SHEET</td>
-      <td>$14.85 PER SHEET</td>
-  </tr>
-  <tr>
-      <th>10 COLOR</th>
-      <td>50-99: $10.60 PER SHEET</br>100+: $10.05 PER SHEET</td>
-      <td>50-99: $10.85 PER SHEET</br>100+: $10.25 PER SHEET</td>
-      <td>$16.75 PER SHEET</td>
-  </tr>
-</tbody>
-</table>
-    </div>
-</section>
-<hr>
-<section class="section hover" id="request">
-    <div class="container">
-      <h1 class="title">Estimate Request</h1>
-      <div class="columns">
-      <div class="column is-half">
-        <div class="field">
-    <label class="label">From</label>
-    <div class="control has-icons-left has-icons-right">
-      <input class="input" type="text" placeholder="Name">
-      <span class="icon is-small is-left">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="icon is-small is-right">
-        <i class="fa fa-check"></i>
-      </span>
-    </div>
-  </div>
+        </div>
+    </section>
+    <hr>
+    <section class="section hover" id="pricing">
+        <div class="container">
+            <h1 class="title">Poster Pricing</h1>
+            <figure class="image is-750x1188 columns">
+                <img class="column is-half is-offset-one-quarter" src="https://static1.squarespace.com/static/5266b6c9e4b04f7def5500ba/t/54513afde4b03ac5bb397d7b/1414609663390/postersizes2.jpg?format=750w" style="height: 100%;">
+            </figure>
+            <table class="table is-bordered">
+                <thead>
+                    <tr class="is-selected">
+                        <th></th>
+                        <th><strong>A</strong>
+                        </th>
+                        <th><strong>B</strong>
+                        </th>
+                        <th><strong>C</strong>
+                        </th>
+                    </tr>
+                </thead>
+                <tr>
+                    <th>SIZE</th>
+                    <td>UP TO 12" x 24"</td>
+                    <td>UP TO 18" x 24"</td>
+                    <td>UP TO 24" x 38"</td>
+                </tr>
+                <tr>
+                    <th>FILM</th>
+                    <td>$25 PER COLOR</td>
+                    <td>$30 PER COLOR</td>
+                    <td>$35 PER COLOR</td>
+                </tr>
+                <tr>
+                    <th>1 COLOR</th>
+                    <td>50-99: $1.60 PER SHEET</br>100+: $1.05 PER SHEET</td>
+                    <td>50-99: $1.75 PER SHEET</br>100+: $1.15 PER SHEET</td>
+                    <td>$2.35 PER SHEET</td>
+                </tr>
+                <tr>
+                    <th>2 COLOR</th>
+                    <td>50-99: $2.60 PER SHEET</br>100+: $2.05 PER SHEET</td>
+                    <td>50-99: $2.75 PER SHEET</br>100+: $2.15 PER SHEET</td>
+                    <td>$3.90 PER SHEET</td>
+                </tr>
+                <tr>
+                    <th>3 COLOR</th>
+                    <td>50-99: $3.60 PER SHEET</br>100+: $3.05 PER SHEET</td>
+                    <td>50-99: $3.75 PER SHEET</br>100+: $3.15 PER SHEET</td>
+                    <td>$5.45 PER SHEET</td>
+                </tr>
+                <tr>
+                    <th>4 COLOR</th>
+                    <td>50-99: $4.60 PER SHEET</br>100+: $4.05 PER SHEET</td>
+                    <td>50-99: $4.75 PER SHEET</br>100+: $4.15 PER SHEET</td>
+                    <td>$7.00 PER SHEET</td>
+                </tr>
+                <tr>
+                    <th>5 COLOR</th>
+                    <td>50-99: $5.60 PER SHEET</br>100+: $5.05 PER SHEET</td>
+                    <td>50-99: $5.75 PER SHEET</br>100+: $5.15 PER SHEET</td>
+                    <td>$8.55 PER SHEET</td>
+                </tr>
+                <tr>
+                    <th>6 COLOR</th>
+                    <td>50-99: $6.60 PER SHEET</br>100+: $6.05 PER SHEET</td>
+                    <td>50-99: $6.75 PER SHEET</br>100+: $6.15 PER SHEET</td>
+                    <td>$10.10 PER SHEET</td>
+                </tr>
+                <tr>
+                    <th>7 COLOR</th>
+                    <td>50-99: $7.60 PER SHEET</br>100+: $7.05 PER SHEET</td>
+                    <td>50-99: $7.75 PER SHEET</br>100+: $7.15 PER SHEET</td>
+                    <td>$11.65 PER SHEET</td>
+                </tr>
+                <tr>
+                    <th>8 COLOR</th>
+                    <td>50-99: $8.60 PER SHEET</br>100+: $8.05 PER SHEET</td>
+                    <td>50-99: $8.75 PER SHEET</br>100+: $8.15 PER SHEET</td>
+                    <td>$13.20 PER SHEET</td>
+                </tr>
+                <tr>
+                    <th>9 COLOR</th>
+                    <td>50-99: $9.60 PER SHEET</br>100+: $9.05 PER SHEET</td>
+                    <td>50-99: $9.80 PER SHEET</br>100+: $9.20 PER SHEET</td>
+                    <td>$14.85 PER SHEET</td>
+                </tr>
+                <tr>
+                    <th>10 COLOR</th>
+                    <td>50-99: $10.60 PER SHEET</br>100+: $10.05 PER SHEET</td>
+                    <td>50-99: $10.85 PER SHEET</br>100+: $10.25 PER SHEET</td>
+                    <td>$16.75 PER SHEET</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <hr>
+    <section class="section hover" id="request">
+      <div class="container">
+        <h1 class="title">Estimate Request</h1>
+        <div class="columns is-desktop">
+          <div class="column is-half is-offset-one-quarter">
+            <div class="field">
+              <label class="label">From</label>
+              <div class="control has-icons-left has-icons-right">
+                <input class="input is-medium" type="text" placeholder="Name">
+                <span class="icon is-left">
+                <i class="fa fa-user"></i>
+                </span>
+                <span class="icon is-right">
+                <i class="fa fa-check"></i>
+                </span>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Email</label>
+              <p class="control has-icons-left has-icons-right">
+                <input class="input  is-medium" type="email" placeholder="Email">
+                <span class="icon is-small is-left">
+                <i class="fa fa-envelope"></i>
+                </span>
+                <span class="icon is-small is-right">
+                <i class="fa fa-check"></i>
+                </span>
+              </p>
+            </div>
+            <div class="field">
+              <label class="label">Message</label>
+              <div class="control">
+                <textarea class="textarea  is-medium" placeholder="Textarea"></textarea>
+              </div>
+            </div>
+            <div class="field">
+              <p class="control">
+              <button class="button is-success is-fullwidth">
+              Send Message
+              </button>
+              </p>
+            </div>
+          </div>
+        </div>
+    </section>
+    <hr>
 
-    <div class="field">
-      <label class="label">Email</label>
-      <p class="control has-icons-left has-icons-right">
-        <input class="input" type="email" placeholder="Email">
-        <span class="icon is-small is-left">
-          <i class="fa fa-envelope"></i>
-        </span>
-        <span class="icon is-small is-right">
-          <i class="fa fa-check"></i>
-        </span>
-      </p>
-    </div>
-    <div class="field">
-  <label class="label">Message</label>
-  <div class="control">
-    <textarea class="textarea" placeholder="Textarea"></textarea>
-  </div>
-</div>
-    <div class="field">
-  <p class="control">
-    <button class="button is-success">
-      Send Message
-    </button>
-  </p>
-</div>
-  </div>
-    </div>
-    </div>
-</section>
-<hr>
-
-<section class="section hover" id="payment">
-    <div class="container">
-      <h1 class="title">Deposits & Payments</h1>
-      <h2 class="subtitle">
+    <section class="section hover" id="payment">
+        <div class="container">
+            <h1 class="title">Deposits & Payments</h1>
+            <h2 class="subtitle">
         Any project over $2000 USD requires a 50% deposit to get started.  Final payment is due after shipping.
       </h2>
-    </div>
-</section>
-<hr>
-<section class="section hover" id="shipping">
-    <div class="container">
-      <h1 class="title">Shipping</h1>
-      <h2 class="subtitle">
+        </div>
+    </section>
+    <hr>
+    <section class="section hover" id="shipping">
+        <div class="container">
+            <h1 class="title">Shipping</h1>
+            <h2 class="subtitle">
         <p>You pay for shipping on orders. All orders are shipped insured FED EX GROUND (unless specified differently.)
 </p></br><p>ALL SHIPPING COSTS ARE SEPARATE FROM INITIAL JOB INVOICE
 (Shipping fees will be determined when jobs are finished and packaged for transport. An additional invoice will be made for shipping only. Prices will vary depending on weight, quantity and expedition of job.)
   </p></h2>
-    </div>
-</section>
-<hr>
-<section class="section hover" id="rush">
-    <div class="container">
-      <h1 class="title">Rush Jobs</h1>
-      <h2 class="subtitle">
+        </div>
+    </section>
+    <hr>
+    <section class="section hover" id="rush">
+        <div class="container">
+            <h1 class="title">Rush Jobs</h1>
+            <h2 class="subtitle">
         <p>Any high volume jobs submitted UNDER A TWO WEEK PERIOD, Will result in an additional fee:
 FEE CONSISTS OF INITIAL COST OF JOB PLUS 25%. Additional fees will be applied if final artwork is not submitted print ready. Job timeline reflects when final print ready artwork is submitted.</p>
 </br>
 <p>Any high volume jobs submitted UNDER A SEVEN DAY PERIOD, Will result in an additional fee:
 FEE CONSISTS OF INITIAL COST OF JOB PLUS 50%. Additional fees will be applied if final artwork is not submitted print ready. Job timeline reflects when final print ready artwork is submitted.</p>
 </h2>
-    </div>
-</section>
-<hr>
-<section class="section hover" id="paper">
-    <div class="container">
-      <h1 class="title">Stock Paper</h1>
-      <h2 class="subtitle">
+        </div>
+    </section>
+    <hr>
+    <section class="section hover" id="paper">
+        <div class="container">
+            <h1 class="title">Stock Paper</h1>
+            <h2 class="subtitle">
         Domtar Cougar Smooth Opaque 100 lb. cover in white or natural.
       </h2>
-    </div>
-</section>
-<hr>
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <p>
-        <strong>Post Consume</strong>.
-      </p>
-      <p>
-        A Child Of <a class="" href="http://diversifiedimages.com">
+        </div>
+    </section>
+    <hr>
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    <strong>Post Consume</strong>.
+                </p>
+                <p>
+                    A Child Of <a class="" href="http://diversifiedimages.com">
           Diversified Images
         </a>
-      </p>
-    </div>
-  </div>
-</footer>
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
